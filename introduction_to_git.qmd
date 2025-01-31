@@ -20,6 +20,21 @@ include-in-header:
 editor: source
 ---
 
-## Add content here
+## git commands
 
-Add content here
+```{mermaid}
+sequenceDiagram
+  participant workspace
+  participant index
+  participant localRepo as Local Repository
+  participant remoteRepo as Remote Repository
+
+  remoteRepo->>workspace: git pull
+  remoteRepo->>localRepo: git fetch
+  workspace->>index: git add
+  index->>localRepo: git commit
+  localRepo->>remoteRepo: git push
+  workspace->>index: git diff
+  workspace->>localRepo: git diff HEAD
+
+```
