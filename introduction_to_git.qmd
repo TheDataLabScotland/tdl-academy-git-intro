@@ -1,6 +1,6 @@
 ---
 title: "Getting started with `git`"
-author: "Amelia Edmondson & Joseph Crispell"
+author: "Amelia Edmondson - Stait & Joseph Crispell"
 date: "last-modified"
 date-format: "Do MMM, YYYY"
 format:
@@ -19,7 +19,3 @@ include-in-header:
       <link rel = "shortcut icon" href = "images/git_logo.png" />
 editor: source
 ---
-
-## Add content here
-
-Add content here
