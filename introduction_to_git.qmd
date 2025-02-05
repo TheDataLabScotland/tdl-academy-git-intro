@@ -35,12 +35,12 @@ sequenceDiagram
 
   remoteRepo->>workspace: git pull
   remoteRepo->>localRepo: git fetch
+  workspace->>index: git diff
+  workspace->>localRepo: git diff HEAD
   workspace->>index: git add
   index->>localRepo: git commit
   localRepo->>remoteRepo: git push
-  workspace->>index: git diff
-  workspace->>localRepo: git diff HEAD
-  workspace->localRepo: 
+  workspace->localRepo:
 
 
   %%{init:{'theme':'neutral', 'themeCSS':'.messageLine0:nth-of-type(1) { stroke: #ff6614; stroke-width: 5px; }.messageLine0:nth-of-type(2) { stroke: #ffab24; stroke-width: 5px; }.messageLine0:nth-of-type(3) { stroke: #22a7d4; stroke-width: 5px; }.messageLine0:nth-of-type(4) { stroke: #23ad94; stroke-width: 5px; }.messageLine0:nth-of-type(5) { stroke: #8aa825; stroke-width: 5px; }.messageLine0:nth-of-type(6) { stroke: brown; stroke-width: 5px; }.messageLine0:nth-of-type(7) { stroke: #8c3ab5; stroke-width: 5px; }.messageLine0:nth-of-type(8) { stroke: #999999; stroke-width: 2px; }.messageText:nth-of-type(1) { fill: black; font-size: 20px !important; font-weight: bold; }.messageText:nth-of-type(2) { fill: black; font-size: 20px !important; font-weight: bold; }.messageText:nth-of-type(3) { fill: black; font-size: 20px !important; font-weight: bold; }.messageText:nth-of-type(4) { fill: black; font-size: 20px !important; font-weight: bold; }.messageText:nth-of-type(5) { fill: black; font-size: 20px !important; font-weight: bold; }.messageText:nth-of-type(6) { fill: black; font-size: 20px !important; font-weight: bold; }.messageText:nth-of-type(7) { fill: black; font-size: 20px !important; font-weight: bold; } #arrowhead path {stroke-width: 4px;}.actor rect { font-size: 40px !important; }'}}%%
