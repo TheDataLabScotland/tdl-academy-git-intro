@@ -1,0 +1,25 @@
+---
+title: "Getting started with `git`"
+author: "Amelia Edmondson & Joseph Crispell"
+date: "last-modified"
+date-format: "Do MMM, YYYY"
+format:
+  revealjs:
+    notes: true
+    slide-number: true
+    css: presentation_styles.css
+    footer: "The Data Lab Scotland"
+    self-contained: true
+title-slide-attributes:
+  data-background-image: images/combined_logo.png
+  data-background-size: 35%
+  data-background-position: 2% 2%
+include-in-header:
+  - text: |
+      <link rel = "shortcut icon" href = "images/git_logo.png" />
+editor: source
+---
+
+## Add content here
+
+Add content here

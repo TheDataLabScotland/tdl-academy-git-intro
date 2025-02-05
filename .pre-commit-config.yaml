@@ -1,0 +1,10 @@
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks: # info on support hooks here: https://pre-commit.com/hooks.html
+    -   id: check-yaml # checks .yaml file formatting
+    -   id: end-of-file-fixer # adds empty line at end of file
+    -   id: trailing-whitespace # removes extra white space
+    -   id: check-added-large-files # doesn't allow files more than 500Kb (configurable)
+        args: ['--maxkb=5000']
+    -   id: detect-private-key # detects the presence of private keys
