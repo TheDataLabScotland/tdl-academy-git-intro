@@ -19,3 +19,39 @@ include-in-header:
       <link rel = "shortcut icon" href = "images/git_logo.png" />
 editor: source
 ---
+
+# Our git backgrounds
+
+## Amelia
+
+- Post-doc at the University of Edinburgh using epidemiological and statistical methods for mental health research.
+
+- What I use git for:
+<!-- Idea for an illustration to show the sorts of things I use git/github for in my job -->
+
+```{mermaid}
+
+%% Make this text and figure much bigger!!
+
+gitGraph
+   commit id: "PhD/post-doc"
+
+   branch data-analysis
+   commit id: "R"
+   commit id: "Python"
+
+   checkout main
+   branch reproducible-pipelines
+   commit id:"nextflow"
+
+   checkout main
+   branch github-actions
+   commit id:"testing"
+   commit id:"GitHub pages"
+
+   checkout main
+   merge data-analysis
+   merge reproducible-pipelines
+   merge github-actions
+
+```
