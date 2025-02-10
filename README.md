@@ -52,11 +52,13 @@ Here are a few useful `git` commands and what they do:
 |`git branch -d [branchName]`                             |Delete branch                                                                                                                                                                         |
 |`git checkout [branchName]`                              |Switch to branch                                                                                                                                                                      |
 |`git checkout -t origin/[branchName]`                    |Switch to remote branch (note you'll need to run git fetch first)                                                                                                                     |
+|`git merge [branchName]`                                 |Merge changes from one branch to another                                                                                                                                              |
 |`git rm [fileName]`                                      |Remove file and record                                                                                                                                                                |
 |`git mv [fileName]`                                      |Move file and version history within repository                                                                                                                                       |
 |`git reset`                                              |Remove any staged/added files                                                                                                                                                         |
 |`git diff [fileName]`                                    |Check for any changes in a file compared to when the file last had a commit associated with it                                                                                        |
-|`git add --patch`                                        |Select a particular change within a file to stage/add and commit                                                                                                                      |
+|`git add --patch`                                        |Select a particular change within a file to stage/add and commit
+|`git --help`                                             |Get help on any git command                                                                                                                                                           |
 
 ### Quarto installation
 
