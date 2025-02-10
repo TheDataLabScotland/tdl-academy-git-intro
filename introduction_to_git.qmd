@@ -20,6 +20,65 @@ include-in-header:
 editor: source
 ---
 
-## Add content here
+## git commands
 
-Add content here
+```{mermaid}
+sequenceDiagram
+  box Local
+  participant workspace
+  participant index
+  participant localRepo as Local Repo
+  end
+  box Remote
+  participant remoteRepo as Remote Repo
+  end
+
+  remoteRepo->>workspace: git pull
+  workspace->>index: git add
+  index->>localRepo: git commit
+  localRepo->>remoteRepo: git push
+
+  %%{
+    init:{
+        'theme':'neutral',
+        'themeCSS':'.messageLine0:nth-of-type(1) {stroke: #ff6614; stroke-width: 5px; }.messageLine0:nth-of-type(2) { stroke: #ffab24; stroke-width: 5px; }.messageLine0:nth-of-type(3) { stroke: #22a7d4; stroke-width: 5px; }.messageLine0:nth-of-type(4) { stroke: #23ad94; stroke-width: 5px; }.messageLine0:nth-of-type(5) { stroke: #8aa825; stroke-width: 5px; }.messageLine0:nth-of-type(6) { stroke: brown; stroke-width: 5px; }.messageLine0:nth-of-type(7) { stroke: #8c3ab5; stroke-width: 5px; }.messageLine0:nth-of-type(8) { stroke: #999999; stroke-width: 2px; }.messageText:nth-of-type(1) { fill: black; font-size: 20px !important; font-weight: bold; }.messageText:nth-of-type(2) { fill: black; font-size: 20px !important; font-weight: bold; }.messageText:nth-of-type(3) { fill: black; font-size: 20px !important; font-weight: bold; }.messageText:nth-of-type(4) { fill: black; font-size: 20px !important; font-weight: bold; }.messageText:nth-of-type(5) { fill: black; font-size: 20px !important; font-weight: bold; }.messageText:nth-of-type(6) { fill: black; font-size: 20px !important; font-weight: bold; }.messageText:nth-of-type(7) { fill: black; font-size: 20px !important; font-weight: bold; } #arrowhead path {stroke-width: 4px;}.actor rect { font-size: 40px !important; } text.actor {fill: black; font-size: 25px !important; font-weight: bold;}'
+        }
+    }%%
+  %%{
+    init: { 'sequence': {'mirrorActors':true} }
+  }%%
+
+%% annoyingly I can't figure out a way to increase text size of the words: workspace, index, local repo and remote repo
+
+```
+
+## `git` command glossary
+
+<div style="height:75%;overflow:auto;">
+
+|Command                                                  |Definition                                                                                                                                                                            |
+|---------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|`git status`                                             |Check current status of local repository - is it up to date?                                                                                                                          |
+|`git pull`                                               |Pull changes from GitHub to local repository                                                                                                                                          |
+|`git add [FileName]`                                     |Stage file for committing                                                                                                                                                             |
+|`git commit -m [message]`                                |Commit staged changes to GitHub. Always add meaningful message.                                                                                                                       |
+|`git push`                                               |Push committed changes to GitHub                                                                                                                                                      |
+|`git fetch`                                              |Get latest version references for repository                                                                                                                                          |
+|`git stash`                                              |Stash changes so that I can send to different branch ( I use when I forgot to switch branches before making change. Run this command - then switch to branch - then run command below)|
+|`git stash pop`                                          |Unstash changes that were previously stashed (Used in combination with command above to move changes onto different branch)                                                           |
+|`git branch`                                             |List existing branches                                                                                                                                                                |
+|`git branch [branchName]`                                |Create new branch                                                                                                                                                                     |
+|`git push --set-upstream origin [branchName]`            |Push a branch online                                                                                                                                                                  |
+|`git branch -d [branchName]`                             |Delete branch                                                                                                                                                                         |
+|`git checkout [branchName]`                              |Switch to branch                                                                                                                                                                      |
+|`git checkout -t origin/[branchName]`                    |Switch to remote branch (note you'll need to run git fetch first)                                                                                                                     |
+|`git merge [branchName]`                                 |Merge changes from one branch to another                                                                                                                                              |
+|`git rm [fileName]`                                      |Remove file and record                                                                                                                                                                |
+|`git mv [fileName]`                                      |Move file and version history within repository                                                                                                                                       |
+|`git reset`                                              |Remove any staged/added files                                                                                                                                                         |
+|`git diff [fileName]`                                    |Check for any changes in a file compared to when the file last had a commit associated with it                                                                                        |
+|`git add --patch`                                        |Select a particular change within a file to stage/add and commit                                                                                                                      |
+|`git --help`                                             |Get help on any git command                                                                                                                                                           |
+
+
+</div>
