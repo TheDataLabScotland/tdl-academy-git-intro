@@ -34,6 +34,30 @@ The current repository has the following structure (designed around building a [
  ┗ 📜README.md # <- you are here
 ```
 
+## `git` command glossary
+Here are a few useful `git` commands and what they do:
+|Command                                                  |Definition                                                                                                                                                                            |
+|---------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|`git status`                                             |Check current status of local repository - is it up to date?                                                                                                                          |
+|`git pull`                                               |Pull changes from GitHub to local repository                                                                                                                                          |
+|`git add [FileName]`                                     |Stage file for committing                                                                                                                                                             |
+|`git commit -m [message]`                                |Commit staged changes to GitHub. Always add meaningful message.                                                                                                                       |
+|`git push`                                               |Push committed changes to GitHub                                                                                                                                                      |
+|`git fetch`                                              |Get latest version references for repository                                                                                                                                          |
+|`git stash`                                              |Stash changes so that I can send to different branch ( I use when I forgot to switch branches before making change. Run this command - then switch to branch - then run command below)|
+|`git stash pop`                                          |Unstash changes that were previously stashed (Used in combination with command above to move changes onto different branch)                                                           |
+|`git branch`                                             |List existing branches                                                                                                                                                                |
+|`git branch [branchName]`                                |Create new branch                                                                                                                                                                     |
+|`git push --set-upstream origin [branchName]`            |Push a branch online                                                                                                                                                                  |
+|`git branch -d [branchName]`                             |Delete branch                                                                                                                                                                         |
+|`git checkout [branchName]`                              |Switch to branch                                                                                                                                                                      |
+|`git checkout -t origin/[branchName]`                    |Switch to remote branch (note you'll need to run git fetch first)                                                                                                                     |
+|`git rm [fileName]`                                      |Remove file and record                                                                                                                                                                |
+|`git mv [fileName]`                                      |Move file and version history within repository                                                                                                                                       |
+|`git reset`                                              |Remove any staged/added files                                                                                                                                                         |
+|`git diff [fileName]`                                    |Check for any changes in a file compared to when the file last had a commit associated with it                                                                                        |
+|`git add --patch`                                        |Select a particular change within a file to stage/add and commit                                                                                                                      |
+
 ### Quarto installation
 
 [Quarto](https://quarto.org/) is an open-source report/presentation building tool that can be used across a range of programming languages. It is based on [Rmarkdown](https://rmarkdown.rstudio.com/) - a reporting tool for the R programming language. The introduction to git presentation is built using the `introduction_to_git.qmd` file producing the `introduction_to_git.html`. To edit and build the `html` based output presentation, you'll need to [install Quarto](https://quarto.org/docs/get-started/) and use a tool like [RStudio](https://posit.co/downloads/) or [Visual Studio Code](https://code.visualstudio.com/).
