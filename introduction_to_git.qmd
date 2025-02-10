@@ -34,9 +34,6 @@ sequenceDiagram
   end
 
   remoteRepo->>workspace: git pull
-  remoteRepo->>localRepo: git fetch
-  workspace->>index: git diff
-  workspace->>localRepo: git diff HEAD
   workspace->>index: git add
   index->>localRepo: git commit
   localRepo->>remoteRepo: git push
