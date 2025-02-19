@@ -1,6 +1,6 @@
 ---
 title: "Getting started with `git`"
-author: "Amelia Edmondson & Joseph Crispell"
+author: "Amelia Edmondson-Stait & Joseph Crispell"
 date: "last-modified"
 date-format: "Do MMM, YYYY"
 format:
@@ -20,7 +20,47 @@ include-in-header:
 editor: source
 ---
 
-## git commands
+## Version control
+
+![ [https://r-cubed-intro.rostools.org/sessions/version-control](https://r-cubed-intro.rostools.org/sessions/version-control) ](images/version-control.jpg){width=60%}
+
+::: {.notes}
+- you would think version control/making changes to a file is a simple linear process.
+- it's also not ideal as you're saving multiple copies of the same file with sometimes very small differences between them
+- but in reality it can be a messy process, with additions to the file coming from different sources
+- this manual way of keeping track of changes to files is manual, error prone and time consuming
+:::
+
+## What is `git`?
+
+::: {.notes}
+Slide from Joe's make_git_happen
+:::
+
+## Snapshots in time
+
+## `git` branches
+
+branch = a working version of your folder
+
+```{mermaid}
+
+```
+
+## Key concepts
+
+## What is GitHub?
+
+::: {.notes}
+Is this the best place for this slide?
+GitHub is first introduced in "Collaboration" point in "Key concepts" slide.
+:::
+
+## Work `git`!
+
+
+
+## `git` commands
 
 ```{mermaid}
 sequenceDiagram
