@@ -39,11 +39,65 @@ Slide from Joe's make_git_happen
 
 ## Snapshots in time
 
-## `git` branches
+##
+### `git` branch = a working version of your folder
 
-branch = a working version of your folder
 
 ```{mermaid}
+
+%%{init: {
+  'theme':'base',
+  'gitGraph': {
+    'showBranches': true,
+    'showCommitLabel':false
+  },
+  'themeVariables': {
+    'tagLabelFontSize': '18px'
+  }
+}}%%
+
+
+gitGraph
+   commit
+   commit
+
+   branch initial_content
+   commit
+   commit
+   commit
+   commit
+
+   checkout main
+   merge initial_content
+
+   checkout initial_content
+   commit
+   commit
+
+   branch 3-git-glossary
+   checkout 3-git-glossary
+   commit
+   commit
+   commit
+
+   checkout initial_content
+   merge 3-git-glossary
+
+   branch 2-git-flow-diagram
+   checkout 2-git-flow-diagram
+   commit
+   commit
+
+   checkout initial_content
+   merge 2-git-flow-diagram
+   checkout main
+   merge initial_content
+
+
+
+
+
+
 
 ```
 
