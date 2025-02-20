@@ -70,29 +70,22 @@ gitGraph
    checkout main
    merge initial_content
 
-   checkout initial_content
-   commit
-   commit
-
    branch 3-git-glossary
    checkout 3-git-glossary
    commit
    commit
    commit
 
-   checkout initial_content
-   merge 3-git-glossary
-
    branch 2-git-flow-diagram
    checkout 2-git-flow-diagram
    commit
    commit
 
-   checkout initial_content
+   checkout 3-git-glossary
    merge 2-git-flow-diagram
-   checkout main
-   merge initial_content
 
+   checkout main
+   merge 3-git-glossary
 ```
 
 ## Key concepts
