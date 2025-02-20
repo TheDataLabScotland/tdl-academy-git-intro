@@ -26,28 +26,38 @@ editor: source
 
 - Post-doc at the University of Edinburgh using epidemiological and statistical methods for mental health research.
 
-- What I use git for:
 <!-- Idea for an illustration to show the sorts of things I use git/github for in my job -->
 
 ```{mermaid}
 
-%% Make this text and figure much bigger!!
+%%{init: {
+  'theme': 'base',
+  'gitGraph': {
+    'showBranches': true,
+    'showCommitLabel':false
+  },
+  'themeVariables': {
+    'tagLabelFontSize': '18px'
+  }
+}}%%
+
 
 gitGraph
-   commit id: "PhD/post-doc"
+   commit tag: "PhD/post-doc"
 
    branch data-analysis
-   commit id: "R"
-   commit id: "Python"
+   commit tag: "R"
+   commit tag: "Python"
 
    checkout main
    branch reproducible-pipelines
-   commit id:"nextflow"
+   commit tag:"nextflow"
 
    checkout main
    branch github-actions
-   commit id:"testing"
-   commit id:"GitHub pages"
+   commit tag:"testing"
+   commit
+   commit tag:"GitHub pages"
 
    checkout main
    merge data-analysis
