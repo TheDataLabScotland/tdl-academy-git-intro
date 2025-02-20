@@ -39,22 +39,79 @@ Slide from Joe's make_git_happen
 
 ## Snapshots in time
 
-## `git` branches
+##
+### `git` branch = a working version of your folder
 
-branch = a working version of your folder
 
 ```{mermaid}
+%%{init: {
+  'theme':'base',
+  'gitGraph': {
+    'showBranches': true,
+    'showCommitLabel':false
+  },
+  'themeVariables': {
+    'tagLabelFontSize': '18px'
+  }
+}}%%
 
+gitGraph
+   commit
+   commit
+
+   %% step 1
+   branch initial_content
+   commit
+   commit
+   commit
+   commit
+
+   %% step 1
+   checkout main
+   merge initial_content
+
+   branch 3-git-glossary
+   checkout 3-git-glossary
+   commit
+   commit
+   commit
+
+   branch 2-git-flow-diagram
+   checkout 2-git-flow-diagram
+   commit
+   commit
+
+   checkout 3-git-glossary
+   merge 2-git-flow-diagram
+
+   checkout main
+   merge 3-git-glossary
 ```
 
 ## Key concepts
 
 ## What is GitHub?
 
+_**GitHub** is a cloud-based platform for hosting `git` repositories_
+
+<br>
+
+Features include:
+
+- [Pull Requests](https://github.blog/developer-skills/github/beginners-guide-to-github-creating-a-pull-request/): Propose changes, review, and discuss before merging branches.
+- [Issues and Projects](https://github.com/features/issues): Track bugs, tasks, and enhancements.
+- [Actions](https://github.com/features/actions): Automate workflows eg. testing, deployment & CI/CD.
+- [Pages](https://pages.github.com/): Host websites directly from repositories.
+
 ::: {.notes}
 Is this the best place for this slide?
 GitHub is first introduced in "Collaboration" point in "Key concepts" slide.
 :::
+
+## Difference between `git` and GitHub
+
+- `git` is a version control system tracking changes to your code locally.
+- **GitHub** is a cloud-based platform for hosting `git` repositories.
 
 ## Work `git`!
 
