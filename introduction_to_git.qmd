@@ -44,7 +44,6 @@ Slide from Joe's make_git_happen
 
 
 ```{mermaid}
-
 %%{init: {
   'theme':'base',
   'gitGraph': {
@@ -56,17 +55,18 @@ Slide from Joe's make_git_happen
   }
 }}%%
 
-
 gitGraph
    commit
    commit
 
+   %% step 1
    branch initial_content
    commit
    commit
    commit
    commit
 
+   %% step 1
    checkout main
    merge initial_content
 
@@ -93,22 +93,30 @@ gitGraph
    checkout main
    merge initial_content
 
-
-
-
-
-
-
 ```
 
 ## Key concepts
 
 ## What is GitHub?
 
+**GitHub** is a cloud-based platform for hosting `git` repositories.
+
+Features include:
+
+- **Pull Requests**: Propose changes, review, and discuss before merging branches.
+- **GitHub Issues**: Track bugs, tasks, and enhancements.
+- **GitHub Actions**: Automate workflows eg. testing, deployment & CI/CD.
+- **GitHub Pages**: Host websites directly from repositories.
+
 ::: {.notes}
 Is this the best place for this slide?
 GitHub is first introduced in "Collaboration" point in "Key concepts" slide.
 :::
+
+## Difference between `git` and GitHub
+
+- `git` is a version control system to track changes to code locally.
+- **GitHub** is a cloud-based platform for hosting `git` repositories.
 
 ## Work `git`!
 
