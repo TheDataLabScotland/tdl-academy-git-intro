@@ -131,6 +131,45 @@ gitGraph
 
 ## Key concepts
 
+::: columns
+::: {.column width="60%"}
+
+- **Repository** - your project folder
+- **Commit** - snapshot of your folder
+- **Branch** - working version of your folder
+- **Collaboration** - working together on codebase with [GitHub](https://github.com/)/[GitLab](https://about.gitlab.com/)/[Azure DevOps](https://azure.microsoft.com/en-us/products/devops)/...
+:::
+
+::: {.column width="40%"}
+
+<br>
+![](images/git_tools.svg)
+
+:::
+:::
+
+## Key concepts
+
+::: columns
+::: {.column width="60%"}
+
+
+- **Repository** - your project folder
+- **Commit** - snapshot of your folder
+  * We `push` snapshots online
+  * And `pull` other's snapshots to local
+- **Branch** - working version of your folder
+- **Collaboration** - working together on codebase
+:::
+
+::: {.column width="40%"}
+
+<br>
+![](images/git_tools.svg)
+
+:::
+:::
+
 ## What is GitHub?
 
 _**GitHub** is a cloud-based platform for hosting `git` repositories_
