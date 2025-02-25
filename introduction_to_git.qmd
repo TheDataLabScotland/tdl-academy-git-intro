@@ -22,7 +22,7 @@ editor: source
 
 ## Version control
 
-![ [https://r-cubed-intro.rostools.org/sessions/version-control](https://r-cubed-intro.rostools.org/sessions/version-control) ](images/version-control.jpg){width=60%}
+[![](images/version-control.jpg){width=75% fig-align="center"}](https://r-cubed-intro.rostools.org/sessions/version-control)
 
 ::: {.notes}
 - you would think version control/making changes to a file is a simple linear process.
