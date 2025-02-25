@@ -49,6 +49,37 @@ Slide from Joe's make_git_happen
 
 ## Snapshots in time
 
+<br>
+
+![](images/file_without_history.svg){width="100%" height="auto"}
+
+## Snapshots in time
+
+<br>
+
+![](images/file_history.svg){width="100%" height="auto"}
+
+## Snapshots in time
+
+::: columns
+::: {.column width="50%"}
+
+![](images/presentation_version_history.png)
+:::
+
+::: {.column width="50%"}
+
+<br>
+
+A record of:
+
+- **What** changes were made
+- **Who** made them
+- **When** they made them
+
+:::
+:::
+
 ##
 ### `git` branch = a working version of your folder
 
