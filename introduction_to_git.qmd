@@ -37,6 +37,12 @@ editor: source
 
 ## What is `git`?
 
+"You use git to take snapshots of all the files in a folder."
+
+[*Alice Bartlett*](https://speakerdeck.com/alicebartlett/git-for-humans)
+
+![](images/folder_snapshots.svg){width="95%" height="auto"}
+
 ::: {.notes}
 Slide from Joe's make_git_happen
 :::
