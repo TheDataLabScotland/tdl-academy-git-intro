@@ -277,7 +277,7 @@ Check out [pre-commit](https://pre-commit.com/) hooks as a way to automatically 
 ::: {.column width="40%"}
 <br>
 
-Check out [pre-commit](https://pre-commit.com/) hooks as a way to automatically run checks
+Check out [pre-commit hooks](https://pre-commit.com/) as a way to automatically run checks
 :::
 
 ::: {.column width="60%"}
