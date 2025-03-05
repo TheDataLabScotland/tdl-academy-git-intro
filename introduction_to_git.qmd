@@ -65,3 +65,23 @@ gitGraph
    merge github-actions
 
 ```
+
+## Joe
+
+<br>
+
+::: columns
+::: {.column width="60%"}
+
+- Pathogen transmission using genomics
+- Continued at University College Dublin
+- Data science in international development
+- Data science in University Services
+:::
+
+::: {.column width="40%"}
+
+![](images/my_path.svg){width="60%" fig-align="right"}
+
+:::
+:::
