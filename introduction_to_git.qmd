@@ -193,10 +193,6 @@ GitHub is first introduced in "Collaboration" point in "Key concepts" slide.
 - `git` is a version control system tracking changes to your code locally.
 - **GitHub** is a cloud-based platform for hosting `git` repositories.
 
-## Work `git`!
-
-
-
 ## `git` commands
 
 ```{mermaid}
