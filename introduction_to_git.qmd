@@ -132,7 +132,8 @@ gitGraph
 ## Key concepts
 
 ::: columns
-::: {.column width="60%"}
+::: {.column width="80%"}
+<br>
 
 - **Repository** - your project folder
 - **Commit** - snapshot of your folder
@@ -140,10 +141,9 @@ gitGraph
 - **Collaboration** - working together on codebase with [GitHub](https://github.com/)/[GitLab](https://about.gitlab.com/)/[Azure DevOps](https://azure.microsoft.com/en-us/products/devops)/...
 :::
 
-::: {.column width="40%"}
+::: {.column width="20%"}
 
-<br>
-![](images/git_tools.svg)
+![](images/version_control_diagram_vertical.svg){.absolute width=auto height=70%}
 
 :::
 :::
@@ -151,8 +151,8 @@ gitGraph
 ## Key concepts
 
 ::: columns
-::: {.column width="60%"}
-
+::: {.column width="80%"}
+<br>
 
 - **Repository** - your project folder
 - **Commit** - snapshot of your folder
@@ -162,10 +162,9 @@ gitGraph
 - **Collaboration** - working together on codebase
 :::
 
-::: {.column width="40%"}
+::: {.column width="20%"}
 
-<br>
-![](images/git_tools.svg)
+![](images/version_control_diagram_vertical.svg){.absolute width=auto height=70%}
 
 :::
 :::
