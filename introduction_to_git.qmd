@@ -360,6 +360,7 @@ repos:
 - [`git` glossary](https://github.com/TheDataLabScotland/tdl-academy-git-intro/tree/main?tab=readme-ov-file#git-command-glossary) of commands to remember
 - Check out [`git` flow](https://www.alexhyett.com/git-flow-github-flow/) for collaboration
 - Version control [guidance](https://best-practice-and-impact.github.io/qa-of-code-guidance/version_control.html) from UK from ONS
+- [Writing a Good Git Commit Message](https://www.gitkraken.com/learn/git/best-practices/git-commit-message)
 :::
 
 ::: {.column width="20%"}
