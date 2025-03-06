@@ -1,5 +1,5 @@
 ---
-title: "Getting started with `git`"
+title: "Getting to grips with `git` and GitHub"
 author: "Amelia Edmondson-Stait & Joseph Crispell"
 date: "last-modified"
 date-format: "Do MMM, YYYY"
