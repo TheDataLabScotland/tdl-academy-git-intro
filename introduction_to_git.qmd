@@ -20,6 +20,72 @@ include-in-header:
 editor: source
 ---
 
+## Our `git` backgrounds
+
+## Amelia
+
+- Post-doc at the University of Edinburgh using epidemiological and statistical methods for mental health research.
+
+<!-- Idea for an illustration to show the sorts of things I use git/github for in my job -->
+
+```{mermaid}
+
+%%{init: {
+  'theme': 'base',
+  'gitGraph': {
+    'showBranches': true,
+    'showCommitLabel':false
+  },
+  'themeVariables': {
+    'tagLabelFontSize': '18px'
+  }
+}}%%
+
+
+gitGraph
+   commit tag: "PhD/post-doc"
+
+   branch data-analysis
+   commit tag: "R"
+   commit tag: "Python"
+
+   checkout main
+   branch reproducible-pipelines
+   commit tag:"nextflow"
+
+   checkout main
+   branch github-actions
+   commit tag:"testing"
+   commit
+   commit tag:"GitHub pages"
+
+   checkout main
+   merge data-analysis
+   merge reproducible-pipelines
+   merge github-actions
+
+```
+
+## Joe
+
+<br>
+
+::: columns
+::: {.column width="60%"}
+
+- Pathogen transmission using genomics
+- Continued at University College Dublin
+- Data science in international development
+- Data science in University Services
+:::
+
+::: {.column width="40%"}
+
+![](images/my_path.svg){width="60%" fig-align="right"}
+
+:::
+:::
+
 ## Version control
 
 [![](images/version-control.jpg){width=70% fig-align="center"}](https://r-cubed-intro.rostools.org/sessions/version-control)
@@ -320,3 +386,4 @@ repos:
 <br>
 <br>
 ![](images/git_logo.png)
+
