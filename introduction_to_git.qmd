@@ -81,8 +81,62 @@ A record of:
 :::
 
 ##
-### `git` branch = a working version of your folder
+#### `git` branch = a new/separate version of the main respository
 
+:::{.notes}
+- Branches allow you to work on different parts of a project without impacting the main branch.
+:::
+
+##
+#### `git` branch = a new/separate version of the main respository
+
+<br>
+<br>
+
+```{mermaid}
+%%{init: {
+  'theme':'base',
+  'gitGraph': {
+    'showBranches': true,
+    'showCommitLabel':false
+  },
+  'themeVariables': {
+    'tagLabelFontSize': '18px'
+  }
+}}%%
+
+gitGraph
+   commit
+   commit
+   commit
+   commit
+   commit
+   commit
+   commit
+   commit
+   commit
+   commit
+   commit
+   commit
+   commit
+
+```
+
+:::{.notes}
+- Instead of working on this main branch we should work on side branches and 
+when the work is complete, the side branch can be merged with the main branch.
+- The latest commit on the main branch should always be a working version of your code.
+:::
+
+##
+#### `git` branch = a new/separate version of the main respository
+
+<br>
+
+```bash
+git branch initial_content
+git checkout initial_content
+```
 
 ```{mermaid}
 %%{init: {
@@ -100,14 +154,242 @@ gitGraph
    commit
    commit
 
-   %% step 1
+   branch initial_content
+   commit
+
+```
+
+
+
+##
+#### `git` branch = a new/separate version of the main respository
+
+<br>
+
+```bash
+git add <file_name>
+git commit -m "<message>"
+```
+
+```{mermaid}
+%%{init: {
+  'theme':'base',
+  'gitGraph': {
+    'showBranches': true,
+    'showCommitLabel':false
+  },
+  'themeVariables': {
+    'tagLabelFontSize': '18px'
+  }
+}}%%
+
+gitGraph
+   commit
+   commit
+
    branch initial_content
    commit
    commit
    commit
    commit
 
-   %% step 1
+```
+
+##
+#### `git` branch = a new/separate version of the main respository
+
+<br>
+
+```bash
+git checkout main
+git merge initial_content
+```
+
+```{mermaid}
+%%{init: {
+  'theme':'base',
+  'gitGraph': {
+    'showBranches': true,
+    'showCommitLabel':false
+  },
+  'themeVariables': {
+    'tagLabelFontSize': '18px'
+  }
+}}%%
+
+gitGraph
+   commit
+   commit
+
+   branch initial_content
+   commit
+   commit
+   commit
+   commit
+
+   checkout main
+   merge initial_content
+   
+```
+
+##
+#### `git` branch = a new/separate version of the main respository
+
+<br>
+<br>
+
+```{mermaid}
+%%{init: {
+  'theme':'base',
+  'gitGraph': {
+    'showBranches': true,
+    'showCommitLabel':false
+  },
+  'themeVariables': {
+    'tagLabelFontSize': '18px'
+  }
+}}%%
+
+gitGraph
+   commit
+   commit
+
+   branch initial_content
+   commit
+   commit
+   commit
+   commit
+
+   checkout main
+   merge initial_content
+
+   branch 3-git-glossary
+   checkout 3-git-glossary
+   commit
+   commit
+   commit
+
+```
+
+##
+#### `git` branch = a new/separate version of the main respository
+
+<br>
+<br>
+
+```{mermaid}
+%%{init: {
+  'theme':'base',
+  'gitGraph': {
+    'showBranches': true,
+    'showCommitLabel':false
+  },
+  'themeVariables': {
+    'tagLabelFontSize': '18px'
+  }
+}}%%
+
+gitGraph
+   commit
+   commit
+
+   branch initial_content
+   commit
+   commit
+   commit
+   commit
+
+   checkout main
+   merge initial_content
+
+   branch 3-git-glossary
+   checkout 3-git-glossary
+   commit
+   commit
+   commit
+
+   branch 2-git-flow-diagram
+   checkout 2-git-flow-diagram
+   commit
+   commit
+
+```
+
+##
+#### `git` branch = a new/separate version of the main respository
+
+<br>
+<br>
+
+```{mermaid}
+%%{init: {
+  'theme':'base',
+  'gitGraph': {
+    'showBranches': true,
+    'showCommitLabel':false
+  },
+  'themeVariables': {
+    'tagLabelFontSize': '18px'
+  }
+}}%%
+
+gitGraph
+   commit
+   commit
+
+   branch initial_content
+   commit
+   commit
+   commit
+   commit
+
+   checkout main
+   merge initial_content
+
+   branch 3-git-glossary
+   checkout 3-git-glossary
+   commit
+   commit
+   commit
+
+   branch 2-git-flow-diagram
+   checkout 2-git-flow-diagram
+   commit
+   commit
+
+   checkout 3-git-glossary
+   merge 2-git-flow-diagram
+
+```
+
+##
+#### `git` branch = a new/separate version of the main respository
+
+<br>
+<br>
+
+```{mermaid}
+%%{init: {
+  'theme':'base',
+  'gitGraph': {
+    'showBranches': true,
+    'showCommitLabel':false
+  },
+  'themeVariables': {
+    'tagLabelFontSize': '18px'
+  }
+}}%%
+
+gitGraph
+   commit
+   commit
+
+   branch initial_content
+   commit
+   commit
+   commit
+   commit
+
    checkout main
    merge initial_content
 
