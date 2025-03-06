@@ -224,6 +224,25 @@ sequenceDiagram
 
 ```
 
+## `git commit `  **` --message`**
+
+## `git commit `  **` -m`**
+
+:::{.incremental}
+- `What is a commit message?`
+  - **Text describing changes made in that commit**
+
+- `What should you write in a commit message?`
+  - **What** change was made.  
+  - **Why** the change was necessary.  
+  - Keep it clear, concise, and meaningful.  
+:::
+
+:::{.notes}
+- A git commit message is descriptive text describing the changes that happened in that commit.
+- It documents history of changes in code.
+:::
+
 ## `git` command glossary
 
 <div style="height:75%;overflow:auto;">
