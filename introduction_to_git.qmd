@@ -243,6 +243,34 @@ sequenceDiagram
 - It documents history of changes in code.
 :::
 
+## `git commit `  **` -m`**
+
+<br>
+
+`git commit -m "add slides on writing git commit messages"`
+
+![](images/git_commit_message.png)
+
+## `git commit `  **` -m`**
+<br>
+```
+git commit -m "add slides on writing git commit messages" -m "Added slides explaining what a commit message is and how to write one effectively. This helps ensure clear and meaningful commit history for better collaboration."
+```
+
+
+![](images/git_commit_message_description.png)
+
+## `git commit ` **` -m`**
+
+:::: {.columns}
+
+::: {.column width="100%"}
+![xkcd.com](https://imgs.xkcd.com/comics/git_commit.png){width=70%}
+:::
+
+::::
+
+
 ## `git` command glossary
 
 <div style="height:75%;overflow:auto;">
