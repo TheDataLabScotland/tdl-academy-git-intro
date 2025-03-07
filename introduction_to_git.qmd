@@ -290,6 +290,53 @@ sequenceDiagram
 
 ```
 
+## `git commit `  **` --message`**
+
+## `git commit `  **` -m`**
+
+:::{.incremental}
+- `What is a commit message?`
+  - **Text describing changes made in that commit**
+
+- `What should you write in a commit message?`
+  - **What** change was made.
+  - **Why** the change was necessary.
+  - Keep it clear, concise, and meaningful.
+:::
+
+:::{.notes}
+- A git commit message is descriptive text describing the changes that happened in that commit.
+- It documents history of changes in code.
+:::
+
+## `git commit `  **` -m`**
+
+<br>
+
+`git commit -m "add slides on writing git commit messages"`
+
+![](images/git_commit_message.png)
+
+## `git commit `  **` -m`**
+<br>
+```
+git commit -m "add slides on writing git commit messages" -m "Added slides explaining what a commit message is and how to write one effectively. This helps ensure clear and meaningful commit history for better collaboration."
+```
+
+
+![](images/git_commit_message_description.png)
+
+## `git commit ` **` -m`**
+
+:::: {.columns}
+
+::: {.column width="100%"}
+![xkcd.com](https://imgs.xkcd.com/comics/git_commit.png){width=70%}
+:::
+
+::::
+
+
 ## `git` command glossary
 
 <div style="height:75%;overflow:auto;">
@@ -371,14 +418,12 @@ repos:
 
 ::: columns
 ::: {.column width="80%"}
-- [Introduction to GitHub](https://docs.github.com/en/get-started/start-your-journey/hello-world)
-- GitHub [documentation](https://docs.github.com/en) pages
+- [Introduction to GitHub](https://docs.github.com/en/get-started/start-your-journey/hello-world) and GitHub [documentation](https://docs.github.com/en) pages
 - A [game](https://learngitbranching.js.org/) to help us think about git branches
-- See this `git` in the command line [tutorial](https://git-scm.com/book/en/v2/Getting-Started-The-Command-Line)
-- Check out the [`git` handbook](https://guides.github.com/introduction/git-handbook/)
-- [`git` glossary](https://github.com/TheDataLabScotland/tdl-academy-git-intro/tree/main?tab=readme-ov-file#git-command-glossary) of commands to remember
+- `git` [command line tutorial](https://git-scm.com/book/en/v2/Getting-Started-The-Command-Line), [handbook](https://guides.github.com/introduction/git-handbook/), and [command glossary](https://github.com/TheDataLabScotland/tdl-academy-git-intro/tree/main?tab=readme-ov-file#git-command-glossary)
 - Check out [`git` flow](https://www.alexhyett.com/git-flow-github-flow/) for collaboration
 - Version control [guidance](https://best-practice-and-impact.github.io/qa-of-code-guidance/version_control.html) from UK from ONS
+- [Writing a Good Git Commit Message](https://www.gitkraken.com/learn/git/best-practices/git-commit-message)
 :::
 
 ::: {.column width="20%"}
