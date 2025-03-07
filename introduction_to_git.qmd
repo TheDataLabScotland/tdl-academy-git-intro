@@ -123,7 +123,7 @@ gitGraph
 ```
 
 :::{.notes}
-- Instead of working on this main branch we should work on side branches and 
+- Instead of working on this main branch we should work on side branches and
 when the work is complete, the side branch can be merged with the main branch.
 - The latest commit on the main branch should always be a working version of your code.
 :::
@@ -229,7 +229,7 @@ gitGraph
 
    checkout main
    merge initial_content
-   
+
 ```
 
 ##
@@ -410,6 +410,13 @@ gitGraph
    checkout main
    merge 3-git-glossary
 ```
+
+##
+#### `git` branch = a new/separate version of the main respository
+
+<br>
+
+![](images/github_branching.png)
 
 ## Key concepts
 
