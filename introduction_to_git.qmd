@@ -147,53 +147,118 @@ A record of:
 :::
 
 ##
-### `git` branch = a working version of your folder
+#### `git` branch = a new/separate version of the main respository
 
+:::{.notes}
+- Branches allow you to work on different parts of a project without impacting the main branch.
+:::
+
+##
+#### `git` branch = a new/separate version of the main respository
+
+<br>
+<br>
 
 ```{mermaid}
-%%{init: {
-  'theme':'base',
-  'gitGraph': {
-    'showBranches': true,
-    'showCommitLabel':false
-  },
-  'themeVariables': {
-    'tagLabelFontSize': '18px'
-  }
-}}%%
-
-gitGraph
-   commit
-   commit
-
-   %% step 1
-   branch initial_content
-   commit
-   commit
-   commit
-   commit
-
-   %% step 1
-   checkout main
-   merge initial_content
-
-   branch 3-git-glossary
-   checkout 3-git-glossary
-   commit
-   commit
-   commit
-
-   branch 2-git-flow-diagram
-   checkout 2-git-flow-diagram
-   commit
-   commit
-
-   checkout 3-git-glossary
-   merge 2-git-flow-diagram
-
-   checkout main
-   merge 3-git-glossary
+%%| file: diagrams/branch_diagram_1.mmd
 ```
+
+:::{.notes}
+- Instead of working on this main branch we should work on side branches and
+when the work is complete, the side branch can be merged with the main branch.
+- The latest commit on the main branch should always be a working version of your code.
+:::
+
+##
+#### `git` branch = a new/separate version of the main respository
+
+<br>
+
+```bash
+git branch initial_content
+git checkout initial_content
+```
+
+```{mermaid}
+%%| file: diagrams/branch_diagram_2.mmd
+```
+
+
+
+##
+#### `git` branch = a new/separate version of the main respository
+
+<br>
+
+```bash
+git add <file_name>
+git commit -m "<message>"
+```
+
+```{mermaid}
+%%| file: diagrams/branch_diagram_3.mmd
+```
+
+##
+#### `git` branch = a new/separate version of the main respository
+
+<br>
+
+```bash
+git checkout main
+git merge initial_content
+```
+
+```{mermaid}
+%%| file: diagrams/branch_diagram_4.mmd
+```
+
+##
+#### `git` branch = a new/separate version of the main respository
+
+<br>
+<br>
+
+```{mermaid}
+%%| file: diagrams/branch_diagram_5.mmd
+```
+
+##
+#### `git` branch = a new/separate version of the main respository
+
+<br>
+<br>
+
+```{mermaid}
+%%| file: diagrams/branch_diagram_6.mmd
+```
+
+##
+#### `git` branch = a new/separate version of the main respository
+
+<br>
+<br>
+
+```{mermaid}
+%%| file: diagrams/branch_diagram_7.mmd
+```
+
+##
+#### `git` branch = a new/separate version of the main respository
+
+<br>
+<br>
+
+```{mermaid}
+%%| file: diagrams/branch_diagram_8.mmd
+```
+
+##
+#### `git` branch = a new/separate version of the main respository
+
+<br>
+
+![](images/github_branching.png)
 
 ## Key concepts
 
@@ -261,33 +326,7 @@ GitHub is first introduced in "Collaboration" point in "Key concepts" slide.
 ## `git` commands
 
 ```{mermaid}
-sequenceDiagram
-  box Local
-  participant workspace
-  participant index
-  participant localRepo as Local Repo
-  end
-  box Remote
-  participant remoteRepo as Remote Repo
-  end
-
-  remoteRepo->>workspace: git pull
-  workspace->>index: git add
-  index->>localRepo: git commit
-  localRepo->>remoteRepo: git push
-
-  %%{
-    init:{
-        'theme':'neutral',
-        'themeCSS':'.messageLine0:nth-of-type(1) {stroke: #ff6614; stroke-width: 5px; }.messageLine0:nth-of-type(2) { stroke: #ffab24; stroke-width: 5px; }.messageLine0:nth-of-type(3) { stroke: #22a7d4; stroke-width: 5px; }.messageLine0:nth-of-type(4) { stroke: #23ad94; stroke-width: 5px; }.messageLine0:nth-of-type(5) { stroke: #8aa825; stroke-width: 5px; }.messageLine0:nth-of-type(6) { stroke: brown; stroke-width: 5px; }.messageLine0:nth-of-type(7) { stroke: #8c3ab5; stroke-width: 5px; }.messageLine0:nth-of-type(8) { stroke: #999999; stroke-width: 2px; }.messageText:nth-of-type(1) { fill: black; font-size: 20px !important; font-weight: bold; }.messageText:nth-of-type(2) { fill: black; font-size: 20px !important; font-weight: bold; }.messageText:nth-of-type(3) { fill: black; font-size: 20px !important; font-weight: bold; }.messageText:nth-of-type(4) { fill: black; font-size: 20px !important; font-weight: bold; }.messageText:nth-of-type(5) { fill: black; font-size: 20px !important; font-weight: bold; }.messageText:nth-of-type(6) { fill: black; font-size: 20px !important; font-weight: bold; }.messageText:nth-of-type(7) { fill: black; font-size: 20px !important; font-weight: bold; } #arrowhead path {stroke-width: 4px;}.actor rect { font-size: 40px !important; } text.actor {fill: black; font-size: 25px !important; font-weight: bold;}'
-        }
-    }%%
-  %%{
-    init: { 'sequence': {'mirrorActors':true} }
-  }%%
-
-%% annoyingly I can't figure out a way to increase text size of the words: workspace, index, local repo and remote repo
-
+%%| file: diagrams/commands_diagram.mmd
 ```
 
 ## `git commit `  **` --message`**
