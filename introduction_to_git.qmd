@@ -94,32 +94,7 @@ A record of:
 <br>
 
 ```{mermaid}
-%%{init: {
-  'theme':'base',
-  'gitGraph': {
-    'showBranches': true,
-    'showCommitLabel':false
-  },
-  'themeVariables': {
-    'tagLabelFontSize': '18px'
-  }
-}}%%
-
-gitGraph
-   commit
-   commit
-   commit
-   commit
-   commit
-   commit
-   commit
-   commit
-   commit
-   commit
-   commit
-   commit
-   commit
-
+%%| file: diagrams/branch_diagram_1.mmd
 ```
 
 :::{.notes}
@@ -139,24 +114,7 @@ git checkout initial_content
 ```
 
 ```{mermaid}
-%%{init: {
-  'theme':'base',
-  'gitGraph': {
-    'showBranches': true,
-    'showCommitLabel':false
-  },
-  'themeVariables': {
-    'tagLabelFontSize': '18px'
-  }
-}}%%
-
-gitGraph
-   commit
-   commit
-
-   branch initial_content
-   commit
-
+%%| file: diagrams/branch_diagram_2.mmd
 ```
 
 
@@ -172,27 +130,7 @@ git commit -m "<message>"
 ```
 
 ```{mermaid}
-%%{init: {
-  'theme':'base',
-  'gitGraph': {
-    'showBranches': true,
-    'showCommitLabel':false
-  },
-  'themeVariables': {
-    'tagLabelFontSize': '18px'
-  }
-}}%%
-
-gitGraph
-   commit
-   commit
-
-   branch initial_content
-   commit
-   commit
-   commit
-   commit
-
+%%| file: diagrams/branch_diagram_3.mmd
 ```
 
 ##
@@ -206,30 +144,7 @@ git merge initial_content
 ```
 
 ```{mermaid}
-%%{init: {
-  'theme':'base',
-  'gitGraph': {
-    'showBranches': true,
-    'showCommitLabel':false
-  },
-  'themeVariables': {
-    'tagLabelFontSize': '18px'
-  }
-}}%%
-
-gitGraph
-   commit
-   commit
-
-   branch initial_content
-   commit
-   commit
-   commit
-   commit
-
-   checkout main
-   merge initial_content
-
+%%| file: diagrams/branch_diagram_4.mmd
 ```
 
 ##
@@ -239,36 +154,7 @@ gitGraph
 <br>
 
 ```{mermaid}
-%%{init: {
-  'theme':'base',
-  'gitGraph': {
-    'showBranches': true,
-    'showCommitLabel':false
-  },
-  'themeVariables': {
-    'tagLabelFontSize': '18px'
-  }
-}}%%
-
-gitGraph
-   commit
-   commit
-
-   branch initial_content
-   commit
-   commit
-   commit
-   commit
-
-   checkout main
-   merge initial_content
-
-   branch 3-git-glossary
-   checkout 3-git-glossary
-   commit
-   commit
-   commit
-
+%%| file: diagrams/branch_diagram_5.mmd
 ```
 
 ##
@@ -278,41 +164,7 @@ gitGraph
 <br>
 
 ```{mermaid}
-%%{init: {
-  'theme':'base',
-  'gitGraph': {
-    'showBranches': true,
-    'showCommitLabel':false
-  },
-  'themeVariables': {
-    'tagLabelFontSize': '18px'
-  }
-}}%%
-
-gitGraph
-   commit
-   commit
-
-   branch initial_content
-   commit
-   commit
-   commit
-   commit
-
-   checkout main
-   merge initial_content
-
-   branch 3-git-glossary
-   checkout 3-git-glossary
-   commit
-   commit
-   commit
-
-   branch 2-git-flow-diagram
-   checkout 2-git-flow-diagram
-   commit
-   commit
-
+%%| file: diagrams/branch_diagram_6.mmd
 ```
 
 ##
@@ -322,44 +174,7 @@ gitGraph
 <br>
 
 ```{mermaid}
-%%{init: {
-  'theme':'base',
-  'gitGraph': {
-    'showBranches': true,
-    'showCommitLabel':false
-  },
-  'themeVariables': {
-    'tagLabelFontSize': '18px'
-  }
-}}%%
-
-gitGraph
-   commit
-   commit
-
-   branch initial_content
-   commit
-   commit
-   commit
-   commit
-
-   checkout main
-   merge initial_content
-
-   branch 3-git-glossary
-   checkout 3-git-glossary
-   commit
-   commit
-   commit
-
-   branch 2-git-flow-diagram
-   checkout 2-git-flow-diagram
-   commit
-   commit
-
-   checkout 3-git-glossary
-   merge 2-git-flow-diagram
-
+%%| file: diagrams/branch_diagram_7.mmd
 ```
 
 ##
@@ -369,46 +184,7 @@ gitGraph
 <br>
 
 ```{mermaid}
-%%{init: {
-  'theme':'base',
-  'gitGraph': {
-    'showBranches': true,
-    'showCommitLabel':false
-  },
-  'themeVariables': {
-    'tagLabelFontSize': '18px'
-  }
-}}%%
-
-gitGraph
-   commit
-   commit
-
-   branch initial_content
-   commit
-   commit
-   commit
-   commit
-
-   checkout main
-   merge initial_content
-
-   branch 3-git-glossary
-   checkout 3-git-glossary
-   commit
-   commit
-   commit
-
-   branch 2-git-flow-diagram
-   checkout 2-git-flow-diagram
-   commit
-   commit
-
-   checkout 3-git-glossary
-   merge 2-git-flow-diagram
-
-   checkout main
-   merge 3-git-glossary
+%%| file: diagrams/branch_diagram_8.mmd
 ```
 
 ##
