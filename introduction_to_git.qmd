@@ -377,6 +377,8 @@ git commit -m "add slides on writing git commit messages" -m "Added slides expla
 
 ## Using `git` in the terminal
 
+![](images/git_commands.gif)
+
 ## Using `git` in GUIs
 
 ## Using `git` in GUIs - [RStudio](https://docs.posit.co/ide/user/ide/guide/tools/version-control.html)
