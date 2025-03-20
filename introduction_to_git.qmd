@@ -375,6 +375,35 @@ git commit -m "add slides on writing git commit messages" -m "Added slides expla
 
 ::::
 
+## Using `git` in the terminal
+
+![](images/git_commands.gif)
+
+## Using `git` in GUIs
+
+## Using `git` in GUIs - [RStudio](https://docs.posit.co/ide/user/ide/guide/tools/version-control.html)
+
+![](images/RStudio1.png)
+
+## Using `git` in GUIs - [RStudio](https://docs.posit.co/ide/user/ide/guide/tools/version-control.html)
+
+![](images/RStudio2.png)
+
+## Using `git` in GUIs - [VSCode](https://code.visualstudio.com/docs/sourcecontrol/github)
+
+![](images/vs_code1.png)
+
+## Using `git` in GUIs - [VSCode](https://code.visualstudio.com/docs/sourcecontrol/github)
+
+![](images/vs_code2.png)
+
+## Using `git` in GUIs - [VSCode](https://code.visualstudio.com/docs/sourcecontrol/github)
+
+![](images/vs_code3.png)
+
+## Using `git` in GUIs - [GitHub Desktop](https://github.com/apps/desktop)
+
+![](images/github_desktop.png)
 
 ## `git` command glossary
 
@@ -470,4 +499,3 @@ repos:
 <br>
 <br>
 ![](images/git_logo.png)
-
