@@ -403,7 +403,7 @@ git commit -m "add slides on writing git commit messages" -m "Added slides expla
 
 ## Using `git` in GUIs - [GitHub Desktop](https://github.com/apps/desktop)
 
-![](images/github_dekstop.png)
+![](images/github_desktop.png)
 
 ## `git` command glossary
 
