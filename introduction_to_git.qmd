@@ -300,6 +300,11 @@ git merge initial_content
 :::
 :::
 
+## Difference between `git` and GitHub
+
+- `git` is a version control system tracking changes to your code locally.
+- **GitHub** is a cloud-based platform for hosting `git` repositories.
+
 ## What is GitHub?
 
 _**GitHub** is a cloud-based platform for hosting `git` repositories_
@@ -318,10 +323,103 @@ Is this the best place for this slide?
 GitHub is first introduced in "Collaboration" point in "Key concepts" slide.
 :::
 
-## Difference between `git` and GitHub
+## GitHub - pull requests {.scrollable}
 
-- `git` is a version control system tracking changes to your code locally.
-- **GitHub** is a cloud-based platform for hosting `git` repositories.
+::: columns
+::: {.column width="40%"}
+<br>
+
+- Sharing changes for review
+- Key for collaborative coding
+- A pause before finalising changes
+:::
+
+::: {.column width="60%"}
+
+![](images/github_pull_request.png)
+
+:::
+:::
+
+## GitHub - issues and projects
+
+::: columns
+::: {.column width="40%"}
+<br>
+
+- Issues are any tasks for your project/codebase
+- Projects boards help to order and monitor tasks
+:::
+
+::: {.column width="60%"}
+
+![](images/github_project.png)
+
+:::
+:::
+
+## GitHub - actions
+
+::: columns
+::: {.column width="40%"}
+
+- Continuous integration and continuous delivery (CI/CD) tool
+- Automate building, testing, publishing processes
+- Ran on virtual machines remotely
+:::
+
+::: {.column width="60%"}
+
+```{.yaml code-line-numbers="1,4-5,12,19,23,26"}
+name: Python package build
+
+on:
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v3
+      with:
+        python-version: 3.11
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+    - name: Test with unittest
+      run: |
+        python -m unittest
+```
+
+:::
+:::
+
+## GitHub - pages
+
+::: columns
+::: {.column width="30%"}
+<br>
+
+- Host a website for you/your organisation/or project
+- Public and free
+:::
+
+::: {.column width="70%"}
+
+![](images/amelia_website.png){.absolute width="70%"}
+
+![](images/joseph_website.png){.absolute .fragment width="70%"}
+
+:::
+:::
 
 ## `git` commands
 
