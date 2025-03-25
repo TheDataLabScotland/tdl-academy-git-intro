@@ -391,14 +391,6 @@ git commit -m "add slides on writing git commit messages" -m "Added slides expla
 
 ::::
 
-## {background="#e1c2ff"}
-
-<br><br>
-
-::: {style="text-align: center; font-size: 2.5em;"}
-If you've used git, what tools have you used?
-:::
-
 ## Using `git` in the terminal
 
 ![](images/git_commands.gif)
