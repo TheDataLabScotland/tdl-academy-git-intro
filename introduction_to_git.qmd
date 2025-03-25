@@ -404,6 +404,23 @@ jobs:
 
 ## GitHub - pages
 
+::: columns
+::: {.column width="30%"}
+<br>
+
+- Host a website for you/your organisation/or project
+- Public and free
+:::
+
+::: {.column width="70%"}
+
+![](images/amelia_website.png){.absolute width="70%"}
+
+![](images/joseph_website.png){.absolute .fragment width="70%"}
+
+:::
+:::
+
 ## `git` commands
 
 ```{mermaid}
