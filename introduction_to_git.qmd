@@ -300,6 +300,11 @@ git merge initial_content
 :::
 :::
 
+## Difference between `git` and GitHub
+
+- `git` is a version control system tracking changes to your code locally.
+- **GitHub** is a cloud-based platform for hosting `git` repositories.
+
 ## What is GitHub?
 
 _**GitHub** is a cloud-based platform for hosting `git` repositories_
@@ -318,10 +323,31 @@ Is this the best place for this slide?
 GitHub is first introduced in "Collaboration" point in "Key concepts" slide.
 :::
 
-## Difference between `git` and GitHub
+## GitHub - pull requests {.scrollable}
 
-- `git` is a version control system tracking changes to your code locally.
-- **GitHub** is a cloud-based platform for hosting `git` repositories.
+::: columns
+::: {.column width="40%"}
+<br>
+
+- Sharing changes for review
+- Key for collaborative coding
+- A pause before finalising changes
+:::
+
+::: {.column width="60%"}
+
+![](images/pull_request.png)
+
+:::
+:::
+
+
+
+## GitHub - issues and projects
+
+## GitHub - actions
+
+## GitHub - pages
 
 ## `git` commands
 
