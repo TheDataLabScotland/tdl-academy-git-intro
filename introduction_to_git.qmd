@@ -336,14 +336,27 @@ GitHub is first introduced in "Collaboration" point in "Key concepts" slide.
 
 ::: {.column width="60%"}
 
-![](images/pull_request.png)
+![](images/github_pull_request.png)
 
 :::
 :::
-
-
 
 ## GitHub - issues and projects
+
+::: columns
+::: {.column width="40%"}
+<br>
+
+- Issues are any tasks for your project/codebase
+- Projects boards help to order and monitor tasks
+:::
+
+::: {.column width="60%"}
+
+![](images/github_project.png)
+
+:::
+:::
 
 ## GitHub - actions
 
