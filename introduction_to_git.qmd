@@ -579,6 +579,48 @@ repos:
 :::
 :::
 
+## `git` security
+
+::: columns
+::: {.column width="60%"}
+- `.gitignore` what should git ignore (like data or outputs)
+- Never put sensitive content (passwords, API keys, and individual details) in code ([see guidance if you do](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository))
+- precommit/Actions workflows can automatically check code
+- Manage who can access/edit your repositories on GitHub
+:::
+
+::: {.column width="40%"}
+
+```{.sh}
+# Ignore data and output folders
+data/*
+outputs/*
+
+# Ignore some standard data formats
+*.csv
+*.xlsx
+*.ods
+
+# Ignore some general output formats
+*.html
+*.pptx
+*.odp
+*.png
+*.tif
+*.jpeg
+*.odj
+
+# Ignore some general report formats
+*.docx
+*.pdf
+*.odt
+
+# Ignore jupyter notebooks
+*.ipynb
+```
+
+:::
+:::
 
 ## Useful resources
 
