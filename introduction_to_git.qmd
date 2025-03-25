@@ -1,6 +1,6 @@
 ---
-title: "Getting started with `git`"
-author: "Amelia Edmondson & Joseph Crispell"
+title: "Getting to grips with `git` and GitHub"
+author: "Amelia Edmondson-Stait & Joseph Crispell"
 date: "last-modified"
 date-format: "Do MMM, YYYY"
 format:
@@ -20,37 +20,504 @@ include-in-header:
 editor: source
 ---
 
-## git commands
+# Our `git` backgrounds
+
+## Amelia
+
+- Post-doc at the University of Edinburgh using epidemiological and statistical methods for mental health research.
+
+<!-- Idea for an illustration to show the sorts of things I use git/github for in my job -->
 
 ```{mermaid}
-sequenceDiagram
-  box Local
-  participant workspace
-  participant index
-  participant localRepo as Local Repo
-  end
-  box Remote
-  participant remoteRepo as Remote Repo
-  end
 
-  remoteRepo->>workspace: git pull
-  workspace->>index: git add
-  index->>localRepo: git commit
-  localRepo->>remoteRepo: git push
+%%{init: {
+  'theme': 'base',
+  'gitGraph': {
+    'showBranches': true,
+    'showCommitLabel':false
+  },
+  'themeVariables': {
+    'tagLabelFontSize': '18px'
+  }
+}}%%
 
-  %%{
-    init:{
-        'theme':'neutral',
-        'themeCSS':'.messageLine0:nth-of-type(1) {stroke: #ff6614; stroke-width: 5px; }.messageLine0:nth-of-type(2) { stroke: #ffab24; stroke-width: 5px; }.messageLine0:nth-of-type(3) { stroke: #22a7d4; stroke-width: 5px; }.messageLine0:nth-of-type(4) { stroke: #23ad94; stroke-width: 5px; }.messageLine0:nth-of-type(5) { stroke: #8aa825; stroke-width: 5px; }.messageLine0:nth-of-type(6) { stroke: brown; stroke-width: 5px; }.messageLine0:nth-of-type(7) { stroke: #8c3ab5; stroke-width: 5px; }.messageLine0:nth-of-type(8) { stroke: #999999; stroke-width: 2px; }.messageText:nth-of-type(1) { fill: black; font-size: 20px !important; font-weight: bold; }.messageText:nth-of-type(2) { fill: black; font-size: 20px !important; font-weight: bold; }.messageText:nth-of-type(3) { fill: black; font-size: 20px !important; font-weight: bold; }.messageText:nth-of-type(4) { fill: black; font-size: 20px !important; font-weight: bold; }.messageText:nth-of-type(5) { fill: black; font-size: 20px !important; font-weight: bold; }.messageText:nth-of-type(6) { fill: black; font-size: 20px !important; font-weight: bold; }.messageText:nth-of-type(7) { fill: black; font-size: 20px !important; font-weight: bold; } #arrowhead path {stroke-width: 4px;}.actor rect { font-size: 40px !important; } text.actor {fill: black; font-size: 25px !important; font-weight: bold;}'
-        }
-    }%%
-  %%{
-    init: { 'sequence': {'mirrorActors':true} }
-  }%%
 
-%% annoyingly I can't figure out a way to increase text size of the words: workspace, index, local repo and remote repo
+gitGraph
+   commit tag: "PhD/post-doc"
+
+   branch data-analysis
+   commit tag: "R"
+   commit tag: "Python"
+
+   checkout main
+   branch reproducible-pipelines
+   commit tag:"nextflow"
+
+   checkout main
+   branch github-actions
+   commit tag:"testing"
+   commit
+   commit tag:"GitHub pages"
+
+   checkout main
+   merge data-analysis
+   merge reproducible-pipelines
+   merge github-actions
 
 ```
+
+## Joe
+
+<br>
+
+::: columns
+::: {.column width="60%"}
+
+- Pathogen transmission using genomics
+- Continued at University College Dublin
+- Data science in international development
+- Data science in University Services
+:::
+
+::: {.column width="40%"}
+
+![](images/my_path.svg){width="60%" fig-align="right"}
+
+:::
+:::
+
+## {background="#e1c2ff"}
+
+<br><br>
+
+::: {style="text-align: center; font-size: 2.5em;"}
+Has anyone used version control tools like git and GitHub?
+:::
+
+## Version control
+
+[![](images/version-control.jpg){width=70% fig-align="center"}](https://r-cubed-intro.rostools.org/sessions/version-control)
+
+<div style="font-size: 0.5em; text-align: right; margin-top: -5%;">
+  *Image taken from [Intro to Reproducible Research in R](https://r-cubed-intro.rostools.org/sessions/version-control)
+</div>
+
+::: {.notes}
+- you would think version control/making changes to a file is a simple linear process.
+- it's also not ideal as you're saving multiple copies of the same file with sometimes very small differences between them
+- but in reality it can be a messy process, with additions to the file coming from different sources
+- this manual way of keeping track of changes to files is manual, error prone and time consuming
+:::
+
+## What is `git`?
+
+"You use git to take snapshots of all the files in a folder."
+
+[*Alice Bartlett*](https://speakerdeck.com/alicebartlett/git-for-humans)
+
+![](images/folder_snapshots.svg){width="95%" height="auto"}
+
+::: {.notes}
+Slide from Joe's make_git_happen
+:::
+
+## Snapshots in time
+
+<br>
+
+![](images/file_without_history.svg){width="100%" height="auto"}
+
+## Snapshots in time
+
+<br>
+
+![](images/file_history.svg){width="100%" height="auto"}
+
+## Snapshots in time
+
+::: columns
+::: {.column width="50%"}
+
+![](images/presentation_version_history.png)
+:::
+
+::: {.column width="50%"}
+
+<br>
+
+A record of:
+
+- **What** changes were made
+- **Who** made them
+- **When** they made them
+
+:::
+:::
+
+## {background="#e1c2ff"}
+
+<br><br>
+
+::: {style="text-align: center; font-size: 2.5em;"}
+Has anyone worked collaboratively on a codebase?
+:::
+
+##
+#### `git` branch = a new/separate version of the main respository
+
+:::{.notes}
+- Branches allow you to work on different parts of a project without impacting the main branch.
+:::
+
+##
+#### `git` branch = a new/separate version of the main respository
+
+<br>
+<br>
+
+```{mermaid}
+%%| file: diagrams/branch_diagram_1.mmd
+```
+
+:::{.notes}
+- Instead of working on this main branch we should work on side branches and
+when the work is complete, the side branch can be merged with the main branch.
+- The latest commit on the main branch should always be a working version of your code.
+:::
+
+##
+#### `git` branch = a new/separate version of the main respository
+
+<br>
+
+```bash
+git branch initial_content
+git checkout initial_content
+```
+
+```{mermaid}
+%%| file: diagrams/branch_diagram_2.mmd
+```
+
+
+
+##
+#### `git` branch = a new/separate version of the main respository
+
+<br>
+
+```bash
+git add <file_name>
+git commit -m "<message>"
+```
+
+```{mermaid}
+%%| file: diagrams/branch_diagram_3.mmd
+```
+
+##
+#### `git` branch = a new/separate version of the main respository
+
+<br>
+
+```bash
+git checkout main
+git merge initial_content
+```
+
+```{mermaid}
+%%| file: diagrams/branch_diagram_4.mmd
+```
+
+##
+#### `git` branch = a new/separate version of the main respository
+
+<br>
+<br>
+
+```{mermaid}
+%%| file: diagrams/branch_diagram_5.mmd
+```
+
+##
+#### `git` branch = a new/separate version of the main respository
+
+<br>
+<br>
+
+```{mermaid}
+%%| file: diagrams/branch_diagram_6.mmd
+```
+
+##
+#### `git` branch = a new/separate version of the main respository
+
+<br>
+<br>
+
+```{mermaid}
+%%| file: diagrams/branch_diagram_7.mmd
+```
+
+##
+#### `git` branch = a new/separate version of the main respository
+
+<br>
+<br>
+
+```{mermaid}
+%%| file: diagrams/branch_diagram_8.mmd
+```
+
+##
+#### `git` branch = a new/separate version of the main respository
+
+<br>
+
+![](images/github_branching.png)
+
+## Key concepts
+
+::: columns
+::: {.column width="80%"}
+<br>
+
+- **Repository** - your project folder
+- **Commit** - snapshot of your folder
+- **Branch** - working version of your folder
+- **Collaboration** - working together on codebase with [GitHub](https://github.com/)/[GitLab](https://about.gitlab.com/)/[Azure DevOps](https://azure.microsoft.com/en-us/products/devops)/...
+:::
+
+::: {.column width="20%"}
+
+![](images/version_control_diagram_vertical.svg){.absolute width=auto height=70%}
+
+:::
+:::
+
+## Key concepts
+
+::: columns
+::: {.column width="80%"}
+<br>
+
+- **Repository** - your project folder
+- **Commit** - snapshot of your folder
+  * We `push` snapshots online
+  * And `pull` other's snapshots to local
+- **Branch** - working version of your folder
+- **Collaboration** - working together on codebase
+:::
+
+::: {.column width="20%"}
+
+![](images/version_control_diagram_vertical.svg){.absolute width=auto height=70%}
+
+:::
+:::
+
+## Difference between `git` and GitHub
+
+- `git` is a version control system tracking changes to your code locally.
+- **GitHub** is a cloud-based platform for hosting `git` repositories.
+
+## What is GitHub?
+
+_**GitHub** is a cloud-based platform for hosting `git` repositories_
+
+<br>
+
+Features include:
+
+- [Pull Requests](https://github.blog/developer-skills/github/beginners-guide-to-github-creating-a-pull-request/): Propose changes, review, and discuss before merging branches.
+- [Issues and Projects](https://github.com/features/issues): Track bugs, tasks, and enhancements.
+- [Actions](https://github.com/features/actions): Automate workflows eg. testing, deployment & CI/CD.
+- [Pages](https://pages.github.com/): Host websites directly from repositories.
+
+::: {.notes}
+Is this the best place for this slide?
+GitHub is first introduced in "Collaboration" point in "Key concepts" slide.
+:::
+
+## GitHub - pull requests {.scrollable}
+
+::: columns
+::: {.column width="40%"}
+<br>
+
+- Sharing changes for review
+- Key for collaborative coding
+- A pause before finalising changes
+:::
+
+::: {.column width="60%"}
+
+![](images/github_pull_request.png)
+
+:::
+:::
+
+## GitHub - issues and projects
+
+::: columns
+::: {.column width="40%"}
+<br>
+
+- Issues are any tasks for your project/codebase
+- Projects boards help to order and monitor tasks
+:::
+
+::: {.column width="60%"}
+
+![](images/github_project.png)
+
+:::
+:::
+
+## GitHub - actions
+
+::: columns
+::: {.column width="40%"}
+
+- Continuous integration and continuous delivery (CI/CD) tool
+- Automate building, testing, publishing processes
+- Ran on virtual machines remotely
+:::
+
+::: {.column width="60%"}
+
+```{.yaml code-line-numbers="1,4-5,12,19,23,26"}
+name: Python package build
+
+on:
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v3
+      with:
+        python-version: 3.11
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+    - name: Test with unittest
+      run: |
+        python -m unittest
+```
+
+:::
+:::
+
+## GitHub - pages
+
+::: columns
+::: {.column width="30%"}
+<br>
+
+- Host a website for you/your organisation/or project
+- Public and free
+:::
+
+::: {.column width="70%"}
+
+![](images/amelia_website.png){.absolute width="70%"}
+
+![](images/joseph_website.png){.absolute .fragment width="70%"}
+
+:::
+:::
+
+## `git` commands
+
+```{mermaid}
+%%| file: diagrams/commands_diagram.mmd
+```
+
+## `git commit `  **` --message`**
+
+## `git commit `  **` -m`**
+
+:::{.incremental}
+- `What is a commit message?`
+  - **Text describing changes made in that commit**
+
+- `What should you write in a commit message?`
+  - **What** change was made.
+  - **Why** the change was necessary.
+  - Keep it clear, concise, and meaningful.
+:::
+
+:::{.notes}
+- A git commit message is descriptive text describing the changes that happened in that commit.
+- It documents history of changes in code.
+:::
+
+## `git commit `  **` -m`**
+
+<br>
+
+`git commit -m "add slides on writing git commit messages"`
+
+![](images/git_commit_message.png)
+
+## `git commit `  **` -m`**
+<br>
+```
+git commit -m "add slides on writing git commit messages" -m "Added slides explaining what a commit message is and how to write one effectively. This helps ensure clear and meaningful commit history for better collaboration."
+```
+
+
+![](images/git_commit_message_description.png)
+
+## `git commit ` **` -m`**
+
+:::: {.columns}
+
+::: {.column width="100%"}
+![xkcd.com](https://imgs.xkcd.com/comics/git_commit.png){width=70%}
+:::
+
+::::
+
+## Using `git` in the terminal
+
+![](images/git_commands.gif)
+
+## Using `git` in GUIs
+
+## Using `git` in GUIs - [RStudio](https://docs.posit.co/ide/user/ide/guide/tools/version-control.html)
+
+![](images/RStudio1.png)
+
+## Using `git` in GUIs - [RStudio](https://docs.posit.co/ide/user/ide/guide/tools/version-control.html)
+
+![](images/RStudio2.png)
+
+## Using `git` in GUIs - [VSCode](https://code.visualstudio.com/docs/sourcecontrol/github)
+
+![](images/vs_code1.png)
+
+## Using `git` in GUIs - [VSCode](https://code.visualstudio.com/docs/sourcecontrol/github)
+
+![](images/vs_code2.png)
+
+## Using `git` in GUIs - [VSCode](https://code.visualstudio.com/docs/sourcecontrol/github)
+
+![](images/vs_code3.png)
+
+## Using `git` in GUIs - [GitHub Desktop](https://github.com/apps/desktop)
+
+![](images/github_desktop.png)
 
 ## `git` command glossary
 
@@ -79,6 +546,113 @@ sequenceDiagram
 |`git diff [fileName]`                                    |Check for any changes in a file compared to when the file last had a commit associated with it                                                                                        |
 |`git add --patch`                                        |Select a particular change within a file to stage/add and commit                                                                                                                      |
 |`git --help`                                             |Get help on any git command                                                                                                                                                           |
-
+|`git grep [pattern]`                                     |Search inside all files in repository for pattern                                                                                                                                     |
 
 </div>
+
+## `git` pre-commit
+
+::: columns
+::: {.column width="40%"}
+<br>
+
+Check out [pre-commit](https://pre-commit.com/) hooks as a way to automatically run checks
+:::
+
+::: {.column width="60%"}
+
+![](images/precommit_in_action.gif)
+
+:::
+:::
+
+## `git` pre-commit
+
+::: columns
+::: {.column width="40%"}
+<br>
+
+Check out [pre-commit hooks](https://pre-commit.com/) as a way to automatically run checks
+:::
+
+::: {.column width="60%"}
+
+<br>
+
+```{.yaml code-line-numbers="4-10"}
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks: # info on support hooks here: https://pre-commit.com/hooks.html
+    -   id: check-yaml # checks .yaml file formatting
+    -   id: end-of-file-fixer # adds empty line at end of file
+    -   id: trailing-whitespace # removes extra white space
+    -   id: check-added-large-files # doesn't allow files more than 500Kb (configurable)
+        args: ['--maxkb=5000']
+    -   id: detect-private-key # detects the presence of private keys
+```
+
+:::
+:::
+
+## `git` security
+
+::: columns
+::: {.column width="60%"}
+- `.gitignore` what should git ignore (like data or outputs)
+- Never put sensitive content (passwords, API keys, and individual details) in code ([see guidance if you do](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository))
+- precommit/Actions workflows can automatically check code
+- Manage who can access/edit your repositories on GitHub
+:::
+
+::: {.column width="40%"}
+
+```{.sh}
+# Ignore data and output folders
+data/*
+outputs/*
+
+# Ignore some standard data formats
+*.csv
+*.xlsx
+*.ods
+
+# Ignore some general output formats
+*.html
+*.pptx
+*.odp
+*.png
+*.tif
+*.jpeg
+*.odj
+
+# Ignore some general report formats
+*.docx
+*.pdf
+*.odt
+
+# Ignore jupyter notebooks
+*.ipynb
+```
+
+:::
+:::
+
+## Useful resources
+
+::: columns
+::: {.column width="80%"}
+- [Introduction to GitHub](https://docs.github.com/en/get-started/start-your-journey/hello-world) and GitHub [documentation](https://docs.github.com/en) pages
+- A [game](https://learngitbranching.js.org/) to help us think about git branches
+- `git` [command line tutorial](https://git-scm.com/book/en/v2/Getting-Started-The-Command-Line), [handbook](https://guides.github.com/introduction/git-handbook/), and [command glossary](https://github.com/TheDataLabScotland/tdl-academy-git-intro/tree/main?tab=readme-ov-file#git-command-glossary)
+- Check out [`git` flow](https://www.alexhyett.com/git-flow-github-flow/) for collaboration
+- Version control [guidance](https://best-practice-and-impact.github.io/qa-of-code-guidance/version_control.html) from UK from ONS
+- [Writing a Good Git Commit Message](https://www.gitkraken.com/learn/git/best-practices/git-commit-message)
+:::
+
+::: {.column width="20%"}
+
+<br>
+<br>
+![](images/git_logo.png)
+:::

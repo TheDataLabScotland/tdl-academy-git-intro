@@ -1,0 +1,37 @@
+%%{init: {
+  'theme':'base',
+  'gitGraph': {
+    'showBranches': true,
+    'showCommitLabel':false
+  },
+  'themeVariables': {
+    'tagLabelFontSize': '18px'
+  }
+}}%%
+
+gitGraph
+   commit
+   commit
+
+   branch initial_content
+   commit
+   commit
+   commit
+   commit
+
+   checkout main
+   merge initial_content
+
+   branch 3-git-glossary
+   checkout 3-git-glossary
+   commit
+   commit
+   commit
+
+   branch 2-git-flow-diagram
+   checkout 2-git-flow-diagram
+   commit
+   commit
+
+   checkout 3-git-glossary
+   merge 2-git-flow-diagram
