@@ -364,7 +364,7 @@ GitHub is first introduced in "Collaboration" point in "Key concepts" slide.
 ::: {.column width="40%"}
 
 - Continuous integration and continuous delivery (CI/CD) tool
-- Automate building/testing/publishing processes
+- Automate building, testing, publishing processes
 - Ran on virtual machines remotely
 :::
 
