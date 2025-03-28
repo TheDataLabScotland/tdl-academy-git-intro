@@ -154,6 +154,51 @@ A record of:
 :::
 :::
 
+## Key concepts
+
+::: columns
+::: {.column width="80%"}
+<br>
+
+- **Repository** - your project folder
+- **Commit** - snapshot of your folder
+- **Branch** - working version of your folder
+- **Collaboration** - working together on codebase with [GitHub](https://github.com/)/[GitLab](https://about.gitlab.com/)/[Azure DevOps](https://azure.microsoft.com/en-us/products/devops)/...
+:::
+
+::: {.column width="20%"}
+
+![](images/version_control_diagram_vertical.svg){.absolute width=auto height=70%}
+
+:::
+:::
+
+## Key concepts
+
+::: columns
+::: {.column width="80%"}
+<br>
+
+- **Repository** - your project folder
+- **Commit** - snapshot of your folder
+  * We `push` snapshots online
+  * And `pull` other's snapshots to local
+- **Branch** - working version of your folder
+- **Collaboration** - working together on codebase
+:::
+
+::: {.column width="20%"}
+
+![](images/version_control_diagram_vertical.svg){.absolute width=auto height=70%}
+
+:::
+:::
+
+## Difference between `git` and GitHub
+
+- `git` is a version control system tracking changes to your code locally.
+- **GitHub** is a cloud-based platform for hosting `git` repositories and working collaboratively.
+
 ## {background="#e1c2ff"}
 
 <br><br>
@@ -276,50 +321,135 @@ git merge initial_content
 
 ![](images/github_branching.png)
 
-## Key concepts
+## `git` commands
 
-::: columns
-::: {.column width="80%"}
+```{mermaid}
+%%| file: diagrams/commands_diagram.mmd
+```
+
+## `git commit `  **` --message`**
+
+## `git commit `  **` -m`**
+
+:::{.incremental}
+- `What is a commit message?`
+  - **Text describing changes made in that commit**
+
+- `What should you write in a commit message?`
+  - **What** change was made.
+  - **Why** the change was necessary.
+  - Keep it clear, concise, and meaningful.
+:::
+
+:::{.notes}
+- A git commit message is descriptive text describing the changes that happened in that commit.
+- It documents history of changes in code.
+:::
+
+## `git commit `  **` -m`**
+
 <br>
 
-- **Repository** - your project folder
-- **Commit** - snapshot of your folder
-- **Branch** - working version of your folder
-- **Collaboration** - working together on codebase with [GitHub](https://github.com/)/[GitLab](https://about.gitlab.com/)/[Azure DevOps](https://azure.microsoft.com/en-us/products/devops)/...
-:::
+`git commit -m "add slides on writing git commit messages"`
 
-::: {.column width="20%"}
+![](images/git_commit_message.png)
 
-![](images/version_control_diagram_vertical.svg){.absolute width=auto height=70%}
-
-:::
-:::
-
-## Key concepts
-
-::: columns
-::: {.column width="80%"}
+## `git commit `  **` -m`**
 <br>
+```
+git commit -m "add slides on writing git commit messages" -m "Added slides explaining what a commit message is and how to write one effectively. This helps ensure clear and meaningful commit history for better collaboration."
+```
 
-- **Repository** - your project folder
-- **Commit** - snapshot of your folder
-  * We `push` snapshots online
-  * And `pull` other's snapshots to local
-- **Branch** - working version of your folder
-- **Collaboration** - working together on codebase
+
+![](images/git_commit_message_description.png)
+
+## `git commit ` **` -m`**
+
+:::: {.columns}
+
+::: {.column width="100%"}
+![xkcd.com](https://imgs.xkcd.com/comics/git_commit.png){width=70%}
 :::
 
-::: {.column width="20%"}
+::::
 
-![](images/version_control_diagram_vertical.svg){.absolute width=auto height=70%}
+## `git` command glossary
 
+<div style="height:75%;overflow:auto;">
+
+|Command                                                  |Definition                                                                                                                                                                            |
+|---------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|`git status`                                             |Check current status of local repository - is it up to date?                                                                                                                          |
+|`git pull`                                               |Pull changes from GitHub to local repository                                                                                                                                          |
+|`git add [FileName]`                                     |Stage file for committing                                                                                                                                                             |
+|`git commit -m [message]`                                |Commit staged changes to GitHub. Always add meaningful message.                                                                                                                       |
+|`git push`                                               |Push committed changes to GitHub                                                                                                                                                      |
+|`git fetch`                                              |Get latest version references for repository                                                                                                                                          |
+|`git stash`                                              |Stash changes so that I can send to different branch ( I use when I forgot to switch branches before making change. Run this command - then switch to branch - then run command below)|
+|`git stash pop`                                          |Unstash changes that were previously stashed (Used in combination with command above to move changes onto different branch)                                                           |
+|`git branch`                                             |List existing branches                                                                                                                                                                |
+|`git branch [branchName]`                                |Create new branch                                                                                                                                                                     |
+|`git push --set-upstream origin [branchName]`            |Push a branch online                                                                                                                                                                  |
+|`git branch -d [branchName]`                             |Delete branch                                                                                                                                                                         |
+|`git checkout [branchName]`                              |Switch to branch                                                                                                                                                                      |
+|`git checkout -t origin/[branchName]`                    |Switch to remote branch (note you'll need to run git fetch first)                                                                                                                     |
+|`git merge [branchName]`                                 |Merge changes from one branch to another                                                                                                                                              |
+|`git rm [fileName]`                                      |Remove file and record                                                                                                                                                                |
+|`git mv [fileName]`                                      |Move file and version history within repository                                                                                                                                       |
+|`git reset`                                              |Remove any staged/added files                                                                                                                                                         |
+|`git diff [fileName]`                                    |Check for any changes in a file compared to when the file last had a commit associated with it                                                                                        |
+|`git add --patch`                                        |Select a particular change within a file to stage/add and commit                                                                                                                      |
+|`git --help`                                             |Get help on any git command                                                                                                                                                           |
+|`git grep [pattern]`                                     |Search inside all files in repository for pattern                                                                                                                                     |
+
+</div>
+
+
+## {background="#e1c2ff"}
+
+<br><br>
+
+::: {style="text-align: center; font-size: 2.5em;"}
+Where do we type these git commands?! 
 :::
+
+## Using `git` in the terminal
+
+![](images/git_commands.gif)
+
+## Using `git` in GUIs
+
+## Using `git` in GUIs - [RStudio](https://docs.posit.co/ide/user/ide/guide/tools/version-control.html)
+
+![](images/RStudio1.png)
+
+## Using `git` in GUIs - [RStudio](https://docs.posit.co/ide/user/ide/guide/tools/version-control.html)
+
+![](images/RStudio2.png)
+
+## Using `git` in GUIs - [VSCode](https://code.visualstudio.com/docs/sourcecontrol/github)
+
+![](images/vs_code1.png)
+
+## Using `git` in GUIs - [VSCode](https://code.visualstudio.com/docs/sourcecontrol/github)
+
+![](images/vs_code2.png)
+
+## Using `git` in GUIs - [VSCode](https://code.visualstudio.com/docs/sourcecontrol/github)
+
+![](images/vs_code3.png)
+
+## Using `git` in GUIs - [GitHub Desktop](https://github.com/apps/desktop)
+
+![](images/github_desktop.png)
+
+## {background="#e1c2ff"}
+
+<br><br>
+
+::: {style="text-align: center; font-size: 2.5em;"}
+GitHub
 :::
-
-## Difference between `git` and GitHub
-
-- `git` is a version control system tracking changes to your code locally.
-- **GitHub** is a cloud-based platform for hosting `git` repositories.
 
 ## What is GitHub?
 
@@ -436,119 +566,6 @@ jobs:
 
 :::
 :::
-
-## `git` commands
-
-```{mermaid}
-%%| file: diagrams/commands_diagram.mmd
-```
-
-## `git commit `  **` --message`**
-
-## `git commit `  **` -m`**
-
-:::{.incremental}
-- `What is a commit message?`
-  - **Text describing changes made in that commit**
-
-- `What should you write in a commit message?`
-  - **What** change was made.
-  - **Why** the change was necessary.
-  - Keep it clear, concise, and meaningful.
-:::
-
-:::{.notes}
-- A git commit message is descriptive text describing the changes that happened in that commit.
-- It documents history of changes in code.
-:::
-
-## `git commit `  **` -m`**
-
-<br>
-
-`git commit -m "add slides on writing git commit messages"`
-
-![](images/git_commit_message.png)
-
-## `git commit `  **` -m`**
-<br>
-```
-git commit -m "add slides on writing git commit messages" -m "Added slides explaining what a commit message is and how to write one effectively. This helps ensure clear and meaningful commit history for better collaboration."
-```
-
-
-![](images/git_commit_message_description.png)
-
-## `git commit ` **` -m`**
-
-:::: {.columns}
-
-::: {.column width="100%"}
-![xkcd.com](https://imgs.xkcd.com/comics/git_commit.png){width=70%}
-:::
-
-::::
-
-## Using `git` in the terminal
-
-![](images/git_commands.gif)
-
-## Using `git` in GUIs
-
-## Using `git` in GUIs - [RStudio](https://docs.posit.co/ide/user/ide/guide/tools/version-control.html)
-
-![](images/RStudio1.png)
-
-## Using `git` in GUIs - [RStudio](https://docs.posit.co/ide/user/ide/guide/tools/version-control.html)
-
-![](images/RStudio2.png)
-
-## Using `git` in GUIs - [VSCode](https://code.visualstudio.com/docs/sourcecontrol/github)
-
-![](images/vs_code1.png)
-
-## Using `git` in GUIs - [VSCode](https://code.visualstudio.com/docs/sourcecontrol/github)
-
-![](images/vs_code2.png)
-
-## Using `git` in GUIs - [VSCode](https://code.visualstudio.com/docs/sourcecontrol/github)
-
-![](images/vs_code3.png)
-
-## Using `git` in GUIs - [GitHub Desktop](https://github.com/apps/desktop)
-
-![](images/github_desktop.png)
-
-## `git` command glossary
-
-<div style="height:75%;overflow:auto;">
-
-|Command                                                  |Definition                                                                                                                                                                            |
-|---------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|`git status`                                             |Check current status of local repository - is it up to date?                                                                                                                          |
-|`git pull`                                               |Pull changes from GitHub to local repository                                                                                                                                          |
-|`git add [FileName]`                                     |Stage file for committing                                                                                                                                                             |
-|`git commit -m [message]`                                |Commit staged changes to GitHub. Always add meaningful message.                                                                                                                       |
-|`git push`                                               |Push committed changes to GitHub                                                                                                                                                      |
-|`git fetch`                                              |Get latest version references for repository                                                                                                                                          |
-|`git stash`                                              |Stash changes so that I can send to different branch ( I use when I forgot to switch branches before making change. Run this command - then switch to branch - then run command below)|
-|`git stash pop`                                          |Unstash changes that were previously stashed (Used in combination with command above to move changes onto different branch)                                                           |
-|`git branch`                                             |List existing branches                                                                                                                                                                |
-|`git branch [branchName]`                                |Create new branch                                                                                                                                                                     |
-|`git push --set-upstream origin [branchName]`            |Push a branch online                                                                                                                                                                  |
-|`git branch -d [branchName]`                             |Delete branch                                                                                                                                                                         |
-|`git checkout [branchName]`                              |Switch to branch                                                                                                                                                                      |
-|`git checkout -t origin/[branchName]`                    |Switch to remote branch (note you'll need to run git fetch first)                                                                                                                     |
-|`git merge [branchName]`                                 |Merge changes from one branch to another                                                                                                                                              |
-|`git rm [fileName]`                                      |Remove file and record                                                                                                                                                                |
-|`git mv [fileName]`                                      |Move file and version history within repository                                                                                                                                       |
-|`git reset`                                              |Remove any staged/added files                                                                                                                                                         |
-|`git diff [fileName]`                                    |Check for any changes in a file compared to when the file last had a commit associated with it                                                                                        |
-|`git add --patch`                                        |Select a particular change within a file to stage/add and commit                                                                                                                      |
-|`git --help`                                             |Get help on any git command                                                                                                                                                           |
-|`git grep [pattern]`                                     |Search inside all files in repository for pattern                                                                                                                                     |
-
-</div>
 
 ## `git` pre-commit
 
