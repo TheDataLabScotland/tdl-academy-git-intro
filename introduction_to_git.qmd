@@ -194,6 +194,11 @@ A record of:
 :::
 :::
 
+## Difference between `git` and GitHub
+
+- `git` is a version control system tracking changes to your code locally.
+- **GitHub** is a cloud-based platform for hosting `git` repositories and working collaboratively.
+
 ## {background="#e1c2ff"}
 
 <br><br>
@@ -445,11 +450,6 @@ Where do we type these git commands?!
 ::: {style="text-align: center; font-size: 2.5em;"}
 How many of us have used GitHub before?
 :::
-
-## Difference between `git` and GitHub
-
-- `git` is a version control system tracking changes to your code locally.
-- **GitHub** is a cloud-based platform for hosting `git` repositories and working collaboratively.
 
 ## What is GitHub?
 
