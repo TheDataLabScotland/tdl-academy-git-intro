@@ -443,7 +443,7 @@ Where do we type these git commands?!
 <br><br>
 
 ::: {style="text-align: center; font-size: 2.5em;"}
-GitHub
+How many of us have used GitHub before?
 :::
 
 ## Difference between `git` and GitHub
