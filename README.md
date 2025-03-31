@@ -28,9 +28,9 @@
   - actions
   - pages
 
-- git hooks and precommit yaml
-
 - git security
+
+- git hooks and precommit yaml
 
 - links to useful resources
 
@@ -52,6 +52,7 @@ The current repository has the following structure (designed around building a [
 ## `git` command glossary
 
 Here are a few useful `git` commands and what they do:
+
 |Command |Definition |
 |---------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |`git status` |Check current status of local repository - is it up to date? |
