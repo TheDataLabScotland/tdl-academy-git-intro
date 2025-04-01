@@ -2,7 +2,7 @@
 
 # Getting to grips with git and GitHub
 
-## Webinar Content:
+## Webinar Content ([see slides here](https://thedatalabscotland.github.io/tdl-academy-git-intro/introduction_to_git.html):
 
 - Out git backgrounds
 
